@@ -1,0 +1,21 @@
+# Python tooling and build output
+__pycache__/
+*.py[cod]
+/.venv/
+/.pytest_cache/
+/.ruff_cache/
+/.coverage
+/htmlcov/
+/build/
+/dist/
+*.egg-info/
+
+# Local IDE/agent state and private or third-party asset samples
+/.idea/
+/.vscode/
+/.commandcode/
+/.codex/
+/.agents/
+/data/
+.env
+.env.*

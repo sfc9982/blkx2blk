@@ -1,0 +1,10 @@
+{
+  "name": "Synthetic example",
+  "preview": true,
+  "scale": 1.25,
+  "origin": [1.5, 2.0, 3.5],
+  "item": [
+    {"label": "first"},
+    {"label": "second"}
+  ]
+}

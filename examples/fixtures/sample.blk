@@ -1,0 +1,10 @@
+name:t="Synthetic example"
+preview:b=yes
+scale:r=1.25
+origin:p3=1.5, 2.0, 3.5
+item{
+  label:t="first"
+}
+item{
+  label:t="second"
+}

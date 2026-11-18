@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling>=1.26,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "blkx2blk"
+version = "0.2.0"
+description = "Round-trip Dagor text BLK and typed BLKX JSON"
+readme = "README.md"
+requires-python = ">=3.10"
+keywords = ["dagor", "war-thunder", "blk", "conversion"]
+classifiers = [
+  "Environment :: Console",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Utilities",
+]
+
+[project.optional-dependencies]
+dev = ["build>=1.2,<2", "pytest>=8.3,<10", "ruff>=0.11,<1", "twine>=6,<7"]
+
+[project.scripts]
+blkx2blk = "blkx2blk.__main__:main"
+
+[project.urls]
+Repository = "https://github.com/sfc9982/blkx2blk"
+Issues = "https://github.com/sfc9982/blkx2blk/issues"
+
+[tool.hatch.build.targets.sdist]
+core-metadata-version = "2.4"
+include = ["/src", "/tests", "/examples", "/pyproject.toml", "/README.md"]
+
+[tool.hatch.build.targets.wheel]
+core-metadata-version = "2.4"
+packages = ["src/blkx2blk"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 110
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "UP"]
+
+[tool.ruff.format]
+quote-style = "single"
